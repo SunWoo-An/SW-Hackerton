@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>class</title>
-        <link rel="stylesheet" href="class_style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/class_style.css')}}">
+    <script>
+      var currentURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+    </script>
   </head>
   <body>
     <form class="info" action="index.html" method="post">
@@ -14,13 +17,15 @@
       </div>
       <div class="kangisil">
         <div class="kang">
-          102호
+          <form class="" action="" method="POST">
+            <input type="button" value = "102호" onclick ="location.href = currentURL+'/reserve'">
+          </form>
         </div>
         <div class="kang">
-          104호
+          <input type="button" value="104호" onclick ="location.href = currentURL+'/reserve'">
         </div>
         <div class="kang">
-          108호
+          <input type="button" value="108호" onclick = "location.href = currentURL+'/reserve'">
         </div>
       </div>
 
@@ -30,7 +35,7 @@
       <br>
 
       <div id="knuimage">
-      <img src="17-3.jpg" width="80%">
+      <img src="{{url_for('static',filename='IMG/KNU.jpg')}}" width="80%">
       </div>
     </form>
   </body>
