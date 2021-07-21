@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="Style.css">
+
+  </head>
+  <body>
+    <form id="id_input" action="login.html" method="POST">
+      <p>아이디</p><input type="text" id = "Identity" value="">
+      <p>비밀번호</p><input type="password" id = "Pass" value="">
+      <p>비밀번호 확인</p><input type="password" id = "word" value="">
+      <p>학번</p><input type="text" id= "number">
+      <input type="submit" value="Submit">
+      <script>
+        var f = document.getElementById('id_input');
+        f.addEventListener("submit", function(e){
+          if(f.Identity.value.length==0){
+            alert('ID를 입력해주세요!');
+            e.preventDefault();
+            f.Identity.focus();
+            return;
+          }
+
+          if(f.number.value.length == 0){
+            alert('학번을 입력해주세요!');
+            e.preventDefault();
+            f.number.focus();
+            return;
+          }
+
+          if(f.Pass.value.length == 0){
+            alert('비밀번호를 입력해주세요!');
+            e.preventDefault();
+            f.Pass.focus();
+            return;
+          }
+
+          if(f.word.value.length == 0){
+            alert('비밀번호를 확인해주세요!');
+            e.preventDefault();
+            f.word.focus();
+            return;
+          }
+
+          var p1 = document.getElementById('Pass').value;
+          var p2 = document.getElementById('word').value;
+          if(p1 != p2){
+            alert("비밀번호가 일치하지 않습니다!");
+            e.preventDefault();
+            f.word.focus();
+            return;
+          }else{
+            return true;
+          }
+        });
+      </script>
+
+    </form>
+  </body>
+</html>
