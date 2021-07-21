@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Check In</title>
-    <link rel="stylesheet" href="popupStyle.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/popupstyle.css')}}">
   </head>
   <body>
     <div id="pop">
       <h2>배정 좌석 확인</h2>
-      <h4>IT-4호관 / 104호 - 5</h4>
+      <h4></h4>
       <div id="info_enter">
         <form action="index.html" method="post">
           <span class = "out"><input type="button"value="취소" onclick = "
-            location.href= 'reservation.html'
+            close();
           "></span>
           <span class = "in"><input type="button"value="배정" onclick = "
             location.href='reservation.html'
