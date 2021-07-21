@@ -3,128 +3,184 @@
   <head lang= "ko">
     <meta charset="utf-8">
     <title>Reservation</title>
-    <link rel="stylesheet" href="reservationstyle.css">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/reservationstyle.css')}}">
+
   </head>
   <script>
-    function showPopup(){
-      window.open("popup.html","Info Enter","width: 50, height 40, left = 5, top = 5");
+
+    function showPopup(num){
+      var url = "popup.html";
+      var name = "Info Enter";
+      var option = "width = 250, height = 150, left = 50, top = 50";
+      var MyWindow = window.open(url,name,option);
+      MyWindow.document.querySelector('h4').write('IT 4호관 / 104호 '+num);
     }
+
+    //클릭하였는지 안 하였는지 확인하는 함수이다. JQUERY
+    $(document).ready(function(){
+      $(".buttons").bind("click", function(){
+    		alert("click " + $(this).text());
+    	});
+      $(".buttons").bind("dblclick", function(){
+    		alert("double-click " + $(this).text());
+      });
+    });
+
+    // 색깔이 칠해져 있을 때 클릭을 못하게 하는 Function
+    function DontTouch(Select,num){
+      var target = document.querySelector(Select);
+      if(num ===  1){
+        target.style.color = '#e74c3c'
+        target.style.pointerEvents: none;
+      }
+      else{
+        target.style.color = '#2ecc71';
+      }
+    }
+
   </script>
   <body>
     <div class="header">
       <header>
         <form class="top" action="class.html" method="post">
           <input type="submit" value="&lt"> <!--다시 홈화면으로 되돌아가는 submit 버튼-->
-          <h2>104호</h2> <!--몇호실인지 얘기를 해주는 Text-->
+          <h2 id = "school"></h2> <!--몇호실인지 얘기를 해주는 Text-->
         </form>
       </header>
 
       <div class="container_whole">
 
         <div class="container_1">
-          <div class="item"><input type="button" id = 'blank' value="X"></div>
           <div class="item"><input type="button" id = 'couponId' value="1" onclick ="
-            showPopup();
-          "></div>
-          <div class="item"><input type="button" id = 'couponId' value="X" onclick ="
-            showPopup();
+            showPopup(1);
           "></div>
           <div class="item"><input type="button" id = 'couponId' value="2" onclick ="
-            showPopup();
-          "></div>
-          <div class="item"><input type="button" id = 'couponId' value="X" onclick ="
-            showPopup();
+            showPopup(2);
           "></div>
           <div class="item"><input type="button" id = 'couponId' value="3" onclick ="
-            showPopup();
+            showPopup(3);
+          "></div>
+          <div class="item"><input type="button" id = 'couponId' value="4" onclick ="
+            showPopup(4);
+
+          "></div>
+          <div class="item"><input type="button" id = 'couponId' value="5" onclick ="
+            showPopup(5);
+
+          "></div>
+          <div class="item"><input type="button" id = 'couponId' value="6" onclick ="
+            showPopup(6);
+
           "></div>
         </div>
 
         <div class="container_2">
           <div class="item"><input type="button" id = 'couponId' value="7" onclick ="
-            showPopup();
+            showPopup(7);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="8" onclick ="
-            showPopup();
+            showPopup(8);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="9" onclick ="
-            showPopup();
+            showPopup(9);
+
           "></div>
           <div class="item"><input type="button" id = 'couponId' value="10" onclick ="
-            showPopup();
+            showPopup(10);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="11" onclick ="
-            showPopup();
+            showPopup(11);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="12" onclick ="
-            showPopup();
+            showPopup(12);
+
           "></div>
         </div>
 
         <div class="container_3">
           <div class="item"><input type="button"  id = 'couponId' value="13" onclick ="
-            showPopup();
+            showPopup(13);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="14" onclick ="
-            showPopup();
+            showPopup(14);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="15" onclick ="
-            showPopup();
+            showPopup(15);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="16" onclick ="
-            showPopup();
+            showPopup(16);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="17" onclick ="
-            showPopup();
+            showPopup(17);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="18" onclick ="
-            showPopup();
+            showPopup(18);
+
           "></div>
         </div>
         <div class="container_4">
           <div class="item"><input type="button"  id = 'couponId' value="19" onclick ="
-            showPopup();
+            showPopup(19);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="20" onclick ="
-            showPopup();
+            showPopup(20);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="21" onclick ="
-            showPopup();
+            showPopup(21);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="22" onclick ="
-            showPopup();
+            showPopup(22);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="23" onclick ="
-            showPopup();
+            showPopup(23);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="24" onclick ="
-            showPopup();
+            showPopup(24);
+
           "></div>
         </div>
         <div class="container_5">
           <div class="item"><input type="button"  id = 'couponId' value="25" onclick ="
-            showPopup();
+            showPopup(25);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="26" onclick ="
-            showPopup();
+            showPopup(26);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="27" onclick ="
-            showPopup();
+            showPopup(27);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="28" onclick ="
-            showPopup();
+            showPopup(28);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="29" onclick ="
-            showPopup();
+            showPopup(29);
+
           "></div>
           <div class="item"><input type="button"  id = 'couponId' value="30" onclick ="
-            showPopup();
+            showPopup(30);
+
           "></div>
         </div>
-
       </div>
-
     </div>
-
   </body>
 </html>
