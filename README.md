@@ -4,7 +4,7 @@
 
 삐용삐용 팀 : 2020116575 안선우 2020114702 이예림 2020112090 이동재 2020116737 한재준
 
-UOEC (using program of empty class)
+이름: UOEC (using program of empty class)
 
 
 1.	주제
