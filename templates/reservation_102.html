@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head lang= "ko">
+    <meta charset="utf-8">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="reservationstyle.css">
+  </head>
+  <script>
+  function seatCheck(v) {
+    if (confirm("102호 "+v+"번 좌석으로 배정하시겠습니까?") == true){    //확인
+      document.removefrm.submit();
+    }
+    else{   //취소
+      return false;
+    }
+  }
+  </script>
+  <body>
+    <div class="header">
+      <header>
+        <form class="top" action="class.html" method="post">
+          <input type="submit" value="&lt"> <!--다시 홈화면으로 되돌아가는 submit 버튼-->
+          <h2>102호</h2> <!--몇호실인지 얘기를 해주는 Text-->
+        </form>
+      </header>
+
+      <div class="container_whole">
+
+        <div class="container_1">
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button" id = 'couponId' value="1" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button" id = 'couponId' value="2" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button" id = 'couponId' value="3" onclick ="
+            seatCheck(value);
+          "></div>
+        </div>
+
+        <div class="container_2">
+          <div class="item"><input type="button" id = 'couponId' value="4" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="5" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="6" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+        </div>
+
+        <div class="container_3">
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="7" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="8" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="9" onclick ="
+            seatCheck(value);
+          "></div>
+        </div>
+        <div class="container_4">
+          <div class="item"><input type="button"  id = 'couponId' value="10" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="11" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="12" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+        </div>
+        <div class="container_5">
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="13" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="14" onclick ="
+            seatCheck(value);
+          "></div>
+          <div class="a"><input type="button" id = 'blank' value=""></div>
+          <div class="item"><input type="button"  id = 'couponId' value="15" onclick ="
+            seatCheck(value);
+          "></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
