@@ -38,16 +38,20 @@
   - 파이썬 파일:
 
 파이썬 패키지
-1) Flask , render_template, url_for,redirect
-2) schedule
-3) sqlite3.db ( 외부프로그램 )
+1) Flask , render_template, url_for,redirect,request - 이들은 pip 설치를 통해 다운받았다.
+2) schedule - pip 설치를 통해 다운받았다.,
+3) sqlite3.db ( 외부프로그램 ) : https://www.sqlite.org/index.html 사이트에서 다운받았다.
 
 main 함수: 좌석 배열을 초기화 해주고 while문의 무한루프에서 예약된 스케줄을 일정시간마다 실행
 exit 함수: 사용자가 퇴실을 눌렀을 때 좌석번호(Index)를 받아와서 좌석 배열을 수정함
 allExit 함수: 모든 좌석을 빈자리로 만듦, 일괄 퇴실시간에 사용
 reserve_f 함수: 사용자가 좌석을 예약할 경우 좌석번호를 받아와서 좌석 배열을 수정함
 checktime 함수: 사용한 시간에 따라 사용시간을 2회까지 연장 하거나 퇴실시킴
-  
+
+Data_making() 함수 : 데이터들을 담을 DB파일을 만드는 함수이다.
+Data_inserting 함수 : 인자들을 받아와 Data를 데이터베이스에 넣는 함수이다.
+Data_Deleting()
+
   - Html, CSS 파일
 
 Web 파일 구성: login.html, Register.html, home.html, class.html, uselist.html, reservation_102.html, reservation_104.html, reservation_108.html
