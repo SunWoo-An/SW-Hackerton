@@ -18,7 +18,7 @@
   
 3.	프로그램 설명
   
-  프로그램 이름 : UOEC (using program of empty class) / 실행방법 :명령프롬포트에서 pip3 install flask, pip3 install request, pip3 install schedule 을 다운을 받은 뒤, 온라인에서 sqlite를 다운 받는다. 컴퓨터 내의 방화벽을 끄고 app.py의 flask 템플릿을 이용해 서버를 연 뒤(app.py 를 실행하여 관련된 주소를 웹페이지에 붙여넣은 뒤,) html을 python 코드 내의 라우팅을 통해 연결하여 프로그램을 구현함.
+  프로그램 이름 : UOEC (using program of empty class) / 실행방법 :명령프롬포트에서 pip3 install flask, pip3 install request, pip3 install schedule 을 다운을 받은 뒤, 온라인에서 sqlite를 다운 받는다. 컴퓨터 내의 방화벽을 끄고 app.py 를 실행하여 나오는 주소를 웹페이지에 붙여넣은 뒤, html을 python 코드 내의 라우팅을 통해 연결하여 프로그램을 구현함.
 
 
 
