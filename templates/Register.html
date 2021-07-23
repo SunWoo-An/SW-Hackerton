@@ -3,40 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>Register</title>
-    <link rel="stylesheet" href="Register_Style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'CSS/Register_style.css')}}">
 
   </head>
   <body>
     <div class="info">
       <h1><strong>Register</strong></h1>
-      <form id="id_input" action="login.html" method="POST">
+      <form id="id_input" action="/" method="POST">
         <div class="r_text">
-          아이디
+          이름
         </div>
-        <input type="text" id = "Identity" value="">
-        <div class="r_text">
-          비밀번호
-        </div>
-        <input type="password" id = "Pass" value="">
-        <div class="r_text">
-          비밀번호확인
-        </div>
-        <input type="password" id = "word" value="">
+        <input type="text" name = "name" id= "name">
         <div class="r_text">
           학번
         </div>
-        <input type="text" id= "number">
-        <input type="submit" value="Submit">
-        <div id="knuimage">
-        <img src="17-3.jpg" width="80%">
+        <input type="text" name = "number" id= "number">
+        <div class="r_text">
+          아이디
         </div>
+        <input type="text" name = "Identity" id = "Identity" value="">
+        <div class="r_text">
+          비밀번호
+        </div>
+        <input type="password" name = "password" id = "Pass" value="">
+        <div class="r_text">
+          비밀번호확인
+        </div>
+        <input type="password" name = "check" id = "word" value="">
+        <input type="submit" value="Submit" onclick = "
+        ">
+        <div id="knuimage">
+          <img src="{{url_for('static',filename = 'IMG/17-3.jpg')}}" width="80%">
+        </div>
+
         <script>
           var f = document.getElementById('id_input');
           f.addEventListener("submit", function(e){
-            if(f.Identity.value.length==0){
-              alert('ID를 입력해주세요!');
+            if(f.name.value.length==0){
+              alert('이름을 입력해주세요!');
               e.preventDefault();
-              f.Identity.focus();
+              f.name.focus();
               return;
             }
 
@@ -44,6 +50,14 @@
               alert('학번을 입력해주세요!');
               e.preventDefault();
               f.number.focus();
+              return;
+            }
+
+
+            if(f.Identity.value.length==0){
+              alert('ID를 입력해주세요!');
+              e.preventDefault();
+              f.Identity.focus();
               return;
             }
 
@@ -69,6 +83,7 @@
               f.word.focus();
               return;
             }else{
+              location.href = '/';
               return true;
             }
           });

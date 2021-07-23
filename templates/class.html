@@ -3,37 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>class</title>
-        <link rel="stylesheet" href="class_style.css">
+        <link rel="stylesheet" href="{{url_for('static',filename = 'CSS/class_style.css')}}">
   </head>
 
   <body>
-    <form class="info" action="index.html" method="post">
+    <form class="info" action="" method="post">
       <h1><strong>IT-4호관</strong></h1>
       <div>
           <h5>이용가능시간 : 9:00 ~ 18:00</h5>
           <br>
       </div>
       <div class="kangisil">
-
           <input type="button" id = "kang" value="102호" onclick ="
-            location.href='reservation_102.html'
+            location.href= '/reserve_102'
           ">
           <input type="button" id = "kang" value="104호" onclick ="
-            location.href='reservation_104.html'
+            location.href='/reserve_104'
           ">
           <input type="button" id = "kang" value="108호" onclick ="
-            location.href='reservation_108.html'
+            location.href='/reserve_108'
           ">
 
         </div>
-
-
       <br>
       <br>
       <br>
 
       <div id="knuimage">
-      <img src="17-3.jpg" width="80%">
+      <img src="{{url_for('static',filename = 'IMG/17-3.jpg')}}" width="80%">
       </div>
     </form>
   </body>

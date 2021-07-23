@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>uselist</title>
-        <link rel="stylesheet" href="uselist_style.css">
+        <link rel="stylesheet" href="{{url_for('static',filename = 'CSS/uselist_style.css')}}">
   </head>
   <body>
-    <form class="info" action="index.html" method="post">
+    <form class="info" action="" method="post">
       <h2><strong>이용기록확인</strong></h2>
       <div>
           <h5>IT-4호관 / 104호</h5>
       </div>
       <div class="kangisil">
         <div class="record">
-          2021-07-20 : 9:00 ~ 13:00
+          이용기록현황 예시 임시파일
         </div>
         <div class="record">
           2021-07-22 : 11:00 ~ 15:00
@@ -30,15 +30,14 @@
         <div class="record">
           2021-07-28 : 10:00 ~ 13:00
         </div>
+
       </div>
-
-
       <br>
       <br>
       <br>
 
       <div id="knuimage">
-      <img src="17-3.jpg" width="80%">
+      <img src="{{url_for('static',filename = 'IMG/17-3.jpg')}}" width="80%">
       </div>
     </form>
   </body>
