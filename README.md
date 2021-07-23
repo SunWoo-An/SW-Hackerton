@@ -18,7 +18,8 @@
   
 3.	프로그램 설명
   
-  프로그램 이름 : UOEC (using program of empty class)
+  프로그램 이름 : UOEC (using program of empty class) / 실행방법 : app.py의 flask 템플릿을 이용해 서버를 연 뒤 html을 python 코드 내의 라우팅을 통해 연결하여 프로그램을 구현함.
+  
   -	강의실 좌석 예약 프로그램 개발
   -	사용자가 건물 및 강의실 출입 시 앱 또는 웹 실행 -> 좌석예약 및 배정 -> 좌석이용 -> 퇴실 과정으로 이루어짐
   - 강의실 사용하기 15분 전 예약가능
