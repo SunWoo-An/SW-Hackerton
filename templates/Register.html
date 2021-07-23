@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'CSS/Register_style.css')}}">
+
+  </head>
+  <body>
+    <div class="info">
+      <h1><strong>Register</strong></h1>
+      <form id="id_input" action="/" method="POST">
+        <div class="r_text">
+          이름
+        </div>
+        <input type="text" name = "name" id= "name">
+        <div class="r_text">
+          학번
+        </div>
+        <input type="text" name = "number" id= "number">
+        <div class="r_text">
+          아이디
+        </div>
+        <input type="text" name = "Identity" id = "Identity" value="">
+        <div class="r_text">
+          비밀번호
+        </div>
+        <input type="password" name = "password" id = "Pass" value="">
+        <div class="r_text">
+          비밀번호확인
+        </div>
+        <input type="password" name = "check" id = "word" value="">
+        <input type="submit" value="Submit" onclick = "
+        ">
+        <div id="knuimage">
+          <img src="{{url_for('static',filename = 'IMG/17-3.jpg')}}" width="80%">
+        </div>
+
+        <script>
+          var f = document.getElementById('id_input');
+          f.addEventListener("submit", function(e){
+            if(f.name.value.length==0){
+              alert('이름을 입력해주세요!');
+              e.preventDefault();
+              f.name.focus();
+              return;
+            }
+
+            if(f.number.value.length == 0){
+              alert('학번을 입력해주세요!');
+              e.preventDefault();
+              f.number.focus();
+              return;
+            }
+
+
+            if(f.Identity.value.length==0){
+              alert('ID를 입력해주세요!');
+              e.preventDefault();
+              f.Identity.focus();
+              return;
+            }
+
+            if(f.Pass.value.length == 0){
+              alert('비밀번호를 입력해주세요!');
+              e.preventDefault();
+              f.Pass.focus();
+              return;
+            }
+
+            if(f.word.value.length == 0){
+              alert('비밀번호를 확인해주세요!');
+              e.preventDefault();
+              f.word.focus();
+              return;
+            }
+
+            var p1 = document.getElementById('Pass').value;
+            var p2 = document.getElementById('word').value;
+            if(p1 != p2){
+              alert("비밀번호가 일치하지 않습니다!");
+              e.preventDefault();
+              f.word.focus();
+              return;
+            }else{
+              location.href = '/';
+              return true;
+            }
+          });
+        </script>
+
+      </form>
+    </div>
+
+  </body>
+</html>
