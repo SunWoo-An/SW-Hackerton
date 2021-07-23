@@ -41,28 +41,28 @@ sqlite 다운로드 이후 app.py 실행
   - 파이썬 파일:
 
 파이썬 패키지
-1) Flask , render_template, url_for,redirect,request - 이들은 pip 설치를 통해 다운받았다.
-2) schedule - pip 설치를 통해 다운받았다.,
-3) sqlite3.db ( 외부프로그램 ) : https://www.sqlite.org/index.html 사이트에서 다운받았다.
+1) Flask , render_template, url_for,redirect,request - 이들은 pip 설치를 통해 다운
+2) schedule - pip 설치를 통해 다운
+3) sqlite3.db ( 외부프로그램 ) : https://www.sqlite.org/index.html 사이트에서 다운
 
-exit 함수: 사용자가 퇴실을 눌렀을 때 좌석번호(Index)를 받아와서 좌석 배열을 수정함
+exit 함수: 사용자가 퇴실을 눌렀을 때 좌석번호(Index)를 받아와서 좌석 배열을 수정
 allExit 함수: 모든 좌석을 빈자리로 만듦, 일괄 퇴실시간에 사용
-reserve_f 함수: 사용자가 좌석을 예약할 경우 좌석번호를 받아와서 좌석 배열을 수정함
-checktime 함수: 사용한 시간에 따라 사용시간을 2회까지 연장 하거나 퇴실시킴
+reserve_f 함수: 사용자가 좌석을 예약할 경우 좌석번호를 받아와서 좌석 배열을 수정
+checktime 함수: 사용한 시간에 따라 사용시간을 2회까지 연장 하거나 퇴실
 
-Data_making() 함수 : 데이터들을 담을 DB파일을 만드는 함수이다.
-Data_inserting 함수 : 인자들을 받아와 Data를 데이터베이스에 넣는 함수이다.
+Data_making() 함수 : 데이터들을 담을 DB파일을 만드는 함수
+Data_inserting 함수 : 인자들을 받아와 Data를 데이터베이스에 넣는 함수
 Data_Deleting() 함수 : ID 인자를 받아와 자리 정보를 제거하는 함수
-Data_Selection() 함수 : ID 인자를 받아와 관련된 정보를 파이썬 딕셔너리에 임시 저장하는 함수이다.
+Data_Selection() 함수 : ID 인자를 받아와 관련된 정보를 파이썬 딕셔너리에 임시 저장하는 함수
 
-main() 함수 : login 하는 site 를 라우팅하여 회원가입에 관련된 정보를 받아와 DB를 실행하고 DB안에 정보들을 입력하는 함수이다.
-register() 함수 : 가입하는 창을 띄워주는 함수이다.
-home() 함수 : 자신이 예약한 정보들을 띄워주는 함수이다. DB에 저장돼있는 정보를 가져와 예약된 이름,학번, 예약시간, 자리 정보들을 시각적으로 보여주는 함수이다.
-uselist() 함수 : 자신이 언제 예약을 하고 그 시간대에 있었는지에 대한 웹사이트를 열어주는 함수이다.
-class_all() 함수 : 자리예약이 가능한 강의실을 나열한 함수이다.
-reserve_102() 함수 : 강의실 102호의 자리를 나열한 함수이다.
-reserve_104() 함수 : 강의실 104호의 자리를 나열한 함수이다.
-reserve_108() 힘수 : 강의실 108호의 자리를 나열한 함수이다.
+main() 함수 : login 하는 site 를 라우팅하여 회원가입에 관련된 정보를 받아와 DB를 실행하고 DB안에 정보들을 입력하는 함수
+register() 함수 : 가입하는 창을 띄워주는 함수
+home() 함수 : 자신이 예약한 정보들을 띄워주고 DB에 저장돼있는 정보를 가져와 예약된 이름,학번, 예약시간, 자리 정보들을 시각적으로 보여주는 함수.
+uselist() 함수 : 자신이 언제 예약을 하고 그 시간대에 있었는지에 대한 웹사이트를 열어주는 함수이
+class_all() 함수 : 자리예약이 가능한 강의실을 나열한 함수
+reserve_102() 함수 : 강의실 102호의 자리를 나열한 함수
+reserve_104() 함수 : 강의실 104호의 자리를 나열한 함수
+reserve_108() 힘수 : 강의실 108호의 자리를 나열한 함수
   - Html, CSS 파일
 
 Web 파일 구성: login.html, Register.html, home.html, class.html, uselist.html, reservation_102.html, reservation_104.html, reservation_108.html
