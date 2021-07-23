@@ -1,6 +1,5 @@
 from flask import Flask, render_template,redirect, request, url_for
 from collections import namedtuple
-import js2py
 import sqlite3
 import time
 import schedule
