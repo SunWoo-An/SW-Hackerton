@@ -1,0 +1,11 @@
+{
+  "User":{
+    "Number" : 0,
+  "Name" : "",
+  "ID" : "",
+  "PW" : "",
+  "Class" : "",
+  "Seat" : 0,
+  "Time" : 0
+  }
+}
