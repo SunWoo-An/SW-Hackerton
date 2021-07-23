@@ -95,3 +95,7 @@ Reservation_102.html, reservation_104.html, reservation_108 html 내부 기능: 
   - 학교 크누피아 앱 또는 통합정보시스템을 플랫폼과 연동 및 연계 시스템 제안
   3. 타학교 진출 전략
   - 적용 가능한 타학교를 조사하여, 이용대상자를 타학교 학부생 및 교수, 직원등으로 넓힘
+
+
+
+유튜브 시연영상 링크: https://youtu.be/pihZFEtnEeE
